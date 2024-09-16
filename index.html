@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumia Cart Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cart-page">
+        <!-- Cart Items Section -->
+        <div class="cart-items" id="cart-items">
+            <h2>Cart (4)</h2>
+
+            <!-- Cart Item 1 -->
+            <div class="cart-item">
+                <img src="./Asset/1 (1).jpg" alt="Product Image" class="product-image"/>
+                <div class="product-details">
+                    <h3>Nokia C31 - 6.75" HD+</h3>
+                    <p class="product-description">4G LTE - 5050mAh - Charcoal</p>
+                    <button class="remove-btn">REMOVE</button>
+                </div>
+                <div class="quantity-and-price">
+                    <p class="price">₦ 81,994</p>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="updateQuantity(0, 'subtract')">-</button>
+                        <span class="quantity">1</span>
+                        <button class="quantity-btn" onclick="updateQuantity(0, 'add')">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Item 2 -->
+            <div class="cart-item">
+                <img src="./Asset/1 (2).jpg" alt="Product Image" class="product-image">
+                <div class="product-details">
+                    <h3>Nokia C31 - 6.75" HD+</h3>
+                    <p class="product-description">4G LTE - 5050mAh - Mint</p>
+                    <button class="remove-btn">REMOVE</button>
+                </div>
+                <div class="quantity-and-price">
+                    <p class="price">₦ 82,990</p>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="updateQuantity(1, 'subtract')">-</button>
+                        <span class="quantity">1</span>
+                        <button class="quantity-btn" onclick="updateQuantity(1, 'add')">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat this structure for each cart item -->
+
+        </div>
+
+        <!-- Cart Summary Section -->
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <div class="summary-row">
+                <p>Subtotal</p>
+                <p class="total-amount" id="total-price">₦ 0</p>
+            </div>
+            <button class="checkout-btn">CHECKOUT (<span id="checkout-total">₦ 0</span>)</button>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>
